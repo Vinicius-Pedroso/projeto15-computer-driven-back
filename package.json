@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node ./src/server.js",
-		"dev": "npx nodemon ./src/server.js",
+    "dev": "npx nodemon ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/Vinicius-Pedroso/projeto15-nometemporario-back/issues"
   },
-  "homepage": "https://github.com/Vinicius-Pedroso/projeto15-nometemporario-back#readme"
+  "homepage": "https://github.com/Vinicius-Pedroso/projeto15-nometemporario-back#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "joi": "^17.7.0"
+  }
 }
