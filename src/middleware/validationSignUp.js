@@ -1,14 +1,9 @@
 import joi from 'joi'
+import { userSchema } from '../schemas/userSchema';
 
 export function validationSignUp(req, res, next) {
     const user = req.body;
 
-    const userSchema = joi.object({
-        name: joi.string().required().min(3),
-        email: joi.string().email().required().min(3),
-        password: joi.string().required().min(3),
-    });
-  
     const { error } = userSchema.validate(user, { abortEarly: false });
   
     if (error) {
