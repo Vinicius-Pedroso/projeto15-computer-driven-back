@@ -1,7 +1,7 @@
 import express from 'express';
 import { login, signUp } from '../controlers/authControler.js';
-import { validationLogin } from '../middlewere/validationLogin.js';
-import { validationSignUp } from '../middlewere/validationSignUp.js';
+import { validationLogin } from '../middleware/validationLogin.js';
+import { validationSignUp } from '../middleware/validationSignUp.js';
 
 const userRouter = express.Router();
 userRouter.post("/login", validationLogin , login)
