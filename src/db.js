@@ -11,7 +11,7 @@ try {
   console.log(err);
 }
 
-const db = mongoClient.db("drivenComputers")
+export const db = mongoClient.db("drivenComputers")
 export const usersCollection = db.collection("users");
 export const sessionsCollection = db.collection("sessions");
 export const productsCollection = db.collection("products");

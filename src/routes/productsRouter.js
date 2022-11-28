@@ -1,11 +1,11 @@
 import {Router } from "express"
-import { productsCollection } from "../db";
-import { productInsertionValidation } from "../middleware/productsValidation";
-import { insertProduct, getProduct } from "../controlers/productController";
+import { productsCollection } from "../db.js";
+import { productInsertionValidation } from "../middleware/productsValidation.js";
+import { insertProduct, getProduct } from "../controlers/productController.js";
 
 const productsRoute = Router()
 
-productsRoute.post("/produts",productInsertionValidation, insertProduct)
+productsRoute.post("/products",productInsertionValidation, insertProduct)
 productsRoute.get("/products", getProduct);
 
 export default productsRoute

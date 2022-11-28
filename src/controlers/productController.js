@@ -1,4 +1,4 @@
-import productsCollection from "../db.js"
+import {productsCollection} from "../db.js"
 
 export async function insertProduct(req, res){
     const product = res.locals.product

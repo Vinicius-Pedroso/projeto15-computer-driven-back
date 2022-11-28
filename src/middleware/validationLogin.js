@@ -1,4 +1,4 @@
-import { usersCollection } from '../db';
+import { usersCollection } from '../db.js';
 import bcrypt from "bcrypt";
 
 export async function validationLogin(req, res, next) {

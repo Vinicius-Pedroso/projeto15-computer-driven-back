@@ -1,11 +1,11 @@
-import { usersCollection, sessionsCollection } from "../db";
+import { usersCollection, sessionsCollection } from "../db.js";
 import bcrypt from "bcrypt";
 import { v4 as uuidV4 } from "uuid";
 
 export async function signUp(req, res) {
-    const user = res.locals.user;
-    const passwordHash = bcrypt.hashSync(user.password, 10);
-  
+    const user = req.body
+    const passwordHash = bcrypt.hashSync(user.password1, 10);
+
     try {
       await usersCollection.insertOne({ ...user, password: passwordHash });
       res.sendStatus(201);

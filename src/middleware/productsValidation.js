@@ -1,4 +1,4 @@
-import { productSchema } from "../schemas/productSchema";
+import { productSchema } from "../schemas/productSchema.js";
 
 export async function productInsertionValidation(req, res, next){
     const product = req.body

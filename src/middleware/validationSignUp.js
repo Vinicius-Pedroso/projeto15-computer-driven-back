@@ -1,5 +1,5 @@
 import joi from 'joi'
-import { userSchema } from '../schemas/userSchema';
+import { userSchema } from '../schemas/userSchema.js';
 
 export function validationSignUp(req, res, next) {
     const user = req.body;
@@ -11,7 +11,6 @@ export function validationSignUp(req, res, next) {
       return res.status(400).send(errors);
     }
   
-    res.locals.user = user;
   
     next();
 }
