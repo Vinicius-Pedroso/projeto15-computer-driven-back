@@ -7,7 +7,7 @@ export async function postCartAlteration (req, res){
 
         try{
 
-            await db.collection("sessions").updateOne({productId: data.productId}, {$set:{amount: amount + data.modify}})
+            await db.collection("sessions").updateOne({productId: data.productId}, {$set:{quantity: quantity + data.modify}})
             return res.sendStatus(201)
     
         } catch (error){
