@@ -1,7 +1,7 @@
 import {productsCollection} from "../db.js"
 
 export async function insertProduct(req, res){
-    const product = res.locals.product
+    const product = req.body
 
     try{
         await productsCollection.insertOne(product)
@@ -13,9 +13,9 @@ export async function insertProduct(req, res){
 }
 
 
-export async function getProduct(){
+export async function getProduct(req,res){
     try{
-        const allProducts = productsCollection.find().toArray()
+        const allProducts = await productsCollection.find().toArray()
         res.status(200).send(allProducts)
     }catch(error){
         console.log(error)
